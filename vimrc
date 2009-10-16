@@ -195,9 +195,13 @@ set textwidth=78
 """""""""""""""""""""""
 " Plugin configuration
 """""""""""""""""""""""
+" runtimepath
 if has("win32")
   set runtimepath=~/prj/vim/vimfiles,d:\prog\vim/vimfiles,d:\prog\vim\vim72
+elseif has("unix")
+  set runtimepath=~/prj/vim/vimfiles,/usr/share/vim/vim72
 endif
+
 " supertab
 
 
