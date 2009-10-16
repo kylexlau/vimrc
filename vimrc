@@ -3,7 +3,13 @@
 """"""""""""""""""""
 set nocompatible
 set autoread
-set mouse=a
+
+set history=500
+
+" enable mouse in many terminal emulators
+if has("mouse")
+  set mouse=a
+endif
 
 " file and backup
 set nobackup
@@ -35,7 +41,11 @@ autocmd! bufwritepost vimrc source ~/prj/vim/vimrc
 """"""""""""""""""""
 " Colors and Fonts
 """"""""""""""""""""
-syntax enable
+" when terminal has colors, syntax on.
+if &t_Co > 2 || has("gui_running")
+  syntax on
+  set hlsearch
+endif
 
 " font
 if has("win32")
@@ -104,7 +114,6 @@ set ignorecase
 
 " incremental search and highlight search
 set incsearch
-set hlsearch
 
 " magic on
 set magic
@@ -186,6 +195,9 @@ set textwidth=78
 """""""""""""""""""""""
 " Plugin configuration
 """""""""""""""""""""""
+if has("win32")
+  set runtimepath=~/prj/vim/vimfiles,d:\prog\vim/vimfiles,d:\prog\vim\vim72
+endif
 " supertab
 
 
