@@ -74,7 +74,7 @@ endif
 " File formats
 """"""""""""""""""""
 " favorite filetypes
-set ffs=dos,unix,mac
+set ffs=unix,dos,mac
 
 nmap <leader>fd :set ff=dos<cr>
 nmap <leader>fu :set ff=unix<cr>
@@ -203,7 +203,6 @@ elseif has("unix")
 endif
 
 " supertab
-
 
 """""""""""""""""""""""
 " MISC
