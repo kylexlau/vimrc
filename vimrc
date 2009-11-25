@@ -6,6 +6,11 @@ set autoread
 
 set history=500
 
+" encoding
+set encoding=utf-8
+set fileencodings=utf-8,gb18030,gb2312,gbk,cp936,ucs-bom,latin1
+set termencoding=utf-8
+
 " enable mouse in many terminal emulators
 if has("mouse")
   set mouse=a
